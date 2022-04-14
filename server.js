@@ -11,8 +11,10 @@ const app = express();
 const PORT = 5000;
 
 app.get('/', (req, res) => {
-  console.log(__dirname);
   res.sendFile(path.join(__dirname, '/MainPage.html'));
+});
+app.get('/Cart', (req, res) => {
+  res.sendFile(path.join(__dirname, '/Cart.html'));
 });
 
 app.listen(PORT);
